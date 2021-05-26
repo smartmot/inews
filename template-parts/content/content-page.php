@@ -13,18 +13,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php if ( ! is_front_page() ) : ?>
-		<header class="entry-header alignwide">
-			<?php get_template_part( 'template-parts/header/entry-header' ); ?>
-			<?php twenty_twenty_one_post_thumbnail(); ?>
-		</header><!-- .entry-header -->
-	<?php elseif ( has_post_thumbnail() ) : ?>
-		<header class="entry-header alignwide">
-			<?php twenty_twenty_one_post_thumbnail(); ?>
-		</header><!-- .entry-header -->
-	<?php endif; ?>
+	<div class="pb_20 pl_20 pr_20">
+        <div class="pb_10">
+            <h2><?php the_title(); ?></h2>
+        </div>
+        <div class="h_1 bc_b"></div>
+    </div>
 
-	<div class="entry-content">
+	<div class="entry-content" style="margin-top: 0;">
 		<?php
 		the_content();
 

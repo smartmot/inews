@@ -21,7 +21,7 @@ get_header();
     <div class="pt_20 pr_10 pl_10">
         <div class="row">
             <?php
-            $page = 0; $offset = 0;$ppp = 4;
+            $page = 0; $offset = 0;$ppp = 12;
             if (isset($_GET["page"]) && is_numeric($_GET["page"]) && $_GET["page"] > 0){
                 $offset = $ppp * $_GET["page"] - $ppp;
                 $page = $_GET["page"];

@@ -81,19 +81,19 @@ $blog_items = array(
         <!---- Pagination -->
         <div class="w_f">
             <div class="pagin pt_10 pb_20 fm-koc">
-                <div class="pagin_i"><a href="<?php echo get_home_url() ."?cat=".$category->term_id. ($page <= 2 ? "" : "&page=" . ($page -1)); ?>" class="t_d_n fm-koc"><span class="fa fa-angle-double-left"></span>&nbsp;ก่อนหน้านี้</a></div>
+                <div class="pagin_i"><a href="<?php echo get_home_url() ."/category/".$category->slug. ($page <= 2 ? "" : "?page=" . ($page -1)); ?>" class="t_d_n fm-koc"><span class="fa fa-angle-double-left"></span>&nbsp;ก่อนหน้านี้</a></div>
                 <div class="pagin_i">...</div>
                 <div class="pagin_i">
                     <?php
                     if (isset($_GET["page"]) && $_GET["page"] == 2){
                         ?>
-                        <a href="<?php echo get_home_url() ."?cat=".$category->term_id; ?>">
+                        <a href="<?php echo get_home_url() ."/category/".$category->slug; ?>">
                             <?php echo $page == 0 ? "2" : ($page - 1); ?>
                         </a>
                         <?php
                     }else{
                         ?>
-                        <a href="<?php echo get_home_url() . "?cat=".$category->term_id."&page=" . ($page == 0 ? 2 : ($page - 1)); ?>">
+                        <a href="<?php echo get_home_url() . "/category/".$category->slug."?page=" . ($page == 0 ? 2 : ($page - 1)); ?>">
                             <?php echo $page == 0 ? "2" : ($page - 1); ?>
                         </a>
                         <?php
@@ -111,7 +111,7 @@ $blog_items = array(
                         <?php
                     }else{
                         ?>
-                        <a href="<?php echo get_home_url()."?cat=".$category->term_id."&page=" . ($page==0?$page+3:$page+1); ?>" class="<?php echo isset($_GET["page"]) ? "cl_act" : ""; ?>">
+                        <a href="<?php echo get_home_url()."/category/".$category->term_id."?page=" . ($page==0?$page+3:$page+1); ?>" class="<?php echo isset($_GET["page"]) ? "cl_act" : ""; ?>">
                             <?php echo $page == 0 ? "3" : ($page); ?>
                         </a>
                         <?php
@@ -124,12 +124,12 @@ $blog_items = array(
                 }else{
                     ?>
                     <div class="pagin_i">
-                        <a href="<?php echo get_home_url() ."?cat=".$category->term_id."&page=" . ($page==0?$page+4:$page+1); ?>">
+                        <a href="<?php echo get_home_url() ."/category/".$category->term_id."?page=" . ($page==0?$page+4:$page+1); ?>">
                             <?php echo $page == 0 ? "4" : ($page + 1); ?>
                         </a>
                     </div>
                     <div class="pagin_i">...</div>
-                    <div class="pagin_i"><a href="<?php echo get_home_url() . "?cat=".$category->term_id."&page=" . ($page==0?2:$page+1); ?>" class="t_d_n fm-koc">ต่อไป&nbsp;<span class="fa fa-angle-double-right"></span></a></div>
+                    <div class="pagin_i"><a href="<?php echo get_home_url() . "/category/".$category->term_id."?page=" . ($page==0?2:$page+1); ?>" class="t_d_n fm-koc">ต่อไป&nbsp;<span class="fa fa-angle-double-right"></span></a></div>
                     <?php
                 }
                 ?>
