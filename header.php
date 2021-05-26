@@ -18,7 +18,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<?php wp_head(); ?>
-    <link rel="stylesheet" href="<?php echo get_home_url(); ?>/wp-content/themes/inews/css/inews.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo get_home_url(); ?>/wp-content/themes/inews/css/inews.css?ver=1.1.2" type="text/css">
     <link rel="stylesheet" href="<?php echo get_home_url(); ?>/wp-content/themes/inews/css/font-awesome.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
