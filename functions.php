@@ -659,3 +659,7 @@ function thai_date($dates=null){
     $time = date_format($date, "H:i");
     return $d . " ". $months[$m] . " ". $y. ", ". $time;
 }
+
+function inews_first_slug($index){
+    return explode("/", $_SERVER["REQUEST_URI"])[$index];
+}

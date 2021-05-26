@@ -34,20 +34,20 @@
                                         <?php
                                         foreach (get_categories() as $cat){
                                             ?>
-                                            <a href="<?php echo site_url()."/category/".$cat->slug; ?>">
+                                            <a href="<?php echo site_url()."/category/".$cat->slug; ?>" class="<?php echo inews_first_slug(4) == $cat->slug ? "active" : ""; ?>">
                                                 <?php echo $cat->name; ?>
                                             </a>
                                             <?php
                                         }
                                         ?>
-                                        <a href="<?php echo site_url()."/about" ; ?>">เกี่ยวกับ</a>
-                                        <a href="<?php echo site_url()."/contact" ; ?>">ติดต่อโฆษณา</a>
+                                        <a href="<?php echo site_url()."/about" ; ?>" class="<?php echo inews_first_slug(3) == "about" ? "active" : ""; ?>">เกี่ยวกับ</a>
+                                        <a href="<?php echo site_url()."/contact" ; ?>" class="<?php echo inews_first_slug(3) == "contact" ? "active" : ""; ?>">ติดต่อโฆษณา</a>
                                         <div class="mobshow">
                                             <div class="pr_10 pl_10">
                                                 <div class="h_1 bc_g"></div>
                                             </div>
-                                            <a href="<?php echo site_url()."/privacy-policy" ; ?>">Privacy Policy</a>
-                                            <a href="<?php echo site_url()."/terms" ; ?>">Terms of service</a>
+                                            <a href="<?php echo site_url()."/privacy-policy" ; ?>" class="<?php echo inews_first_slug(3) == "privacy-policy" ? "active" : ""; ?>">Privacy Policy</a>
+                                            <a href="<?php echo site_url()."/terms" ; ?>" class="<?php echo inews_first_slug(3) == "terms" ? "active" : ""; ?>">Terms of service</a>
                                         </div>
                                     </div>
                                 </div>
